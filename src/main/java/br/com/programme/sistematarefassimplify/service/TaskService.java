@@ -1,8 +1,8 @@
 package br.com.programme.sistematarefassimplify.service;
 
 import br.com.programme.sistematarefassimplify.core.model.Tarefa;
+import br.com.programme.sistematarefassimplify.infra.config.exception.BadRequestException;
 import br.com.programme.sistematarefassimplify.infra.repo.TaskRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -35,8 +35,8 @@ public class TaskService {
         repository.findById(id).ifPresentOrElse((existingTask) -> {
             task.setIdTable(id);
             repository.save(task);
-        }, () -> { // Todo: Create Badrequest exception.
-            throw new RuntimeException("Badquest -> Task %d não existe! ".formatted(id));
+        }, () -> {
+            throw new BadRequestException("Task %d não existe! ".formatted(id));
         });
 
         return task;
@@ -52,7 +52,7 @@ public class TaskService {
 
         }
 
-        return "Task %d não existe!".formatted(id);
+        throw new BadRequestException("Task %d não existe!".formatted(id));
 
 
     }
