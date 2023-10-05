@@ -1,6 +1,9 @@
 package br.com.programme.sistematarefassimplify.core.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,15 +19,18 @@ public class Tarefa {
     private long idTable;
 
     @Column(name = "name", nullable = false)
-//    @NotNull --> Maybe available on spring validation package.
+    @NotBlank
     private String nome;
 
+    @NotEmpty
     @Column(nullable = false, name = "descricao")
     private String descricao;
 
+    @NotNull
     @Column(name = "done", nullable = false)
     private boolean realizado;
 
+    @NotNull
     @Column(name = "priority", nullable = false)
     private int prioridade;
 

@@ -2,6 +2,7 @@ package br.com.programme.sistematarefassimplify.controller;
 
 import br.com.programme.sistematarefassimplify.core.model.Tarefa;
 import br.com.programme.sistematarefassimplify.service.TaskService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class TaskController {
     
 
     @PostMapping
-    ResponseEntity create(@RequestBody Tarefa task) {
+    ResponseEntity create(@Valid @RequestBody Tarefa task) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(service.newTask(task));
     }
