@@ -36,7 +36,7 @@ public class TaskService {
             task.setIdTable(id);
             repository.save(task);
         }, () -> {
-            throw new BadRequestException("Task %d não existe! ".formatted(id));
+            throw new BadRequestException("Task %d não existe!".formatted(id));
         });
 
         return task;

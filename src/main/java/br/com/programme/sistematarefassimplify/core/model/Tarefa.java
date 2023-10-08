@@ -11,7 +11,6 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "task")
-
 public class Tarefa {
 
     @Id
@@ -27,11 +26,20 @@ public class Tarefa {
     private String descricao;
 
     @NotNull
-    @Column(name = "done", nullable = false)
+    @Column(name = "done")
     private boolean realizado;
 
     @NotNull
-    @Column(name = "priority", nullable = false)
+    @Column(name = "priority")
     private int prioridade;
 
+    public Tarefa(String nome, String descricao, boolean realizado, int prioridade) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.realizado = realizado;
+        this.prioridade = prioridade;
+    }
+
+    public Tarefa() {
+    }
 }
