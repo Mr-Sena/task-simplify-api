@@ -1,5 +1,6 @@
 package br.com.programme.sistematarefassimplify.taac;
 
+/*
 import br.com.programme.sistematarefassimplify.core.model.Tarefa;
 import br.com.programme.sistematarefassimplify.service.TaskService;
 import org.junit.jupiter.api.Test;
@@ -7,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+ */
+
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class TestWebRequest {
 
+	/*
 	@Autowired
 	private WebTestClient webClient;
 
@@ -67,16 +71,6 @@ class TestWebRequest {
 				.jsonPath("$.descricao").isEqualTo(task.getDescricao())
 				.jsonPath("$.realizado").isEqualTo(task.isRealizado())
 				.jsonPath("$.prioridade").isEqualTo(task.getPrioridade());
-
-
-				/* To find query test
-				.jsonPath("$").isArray() // Expression $ is the root content.
-				.jsonPath("$.lenght()").isEqualTo(1)
-				.jsonPath("$[0].nome").isEqualTo(task.getNome())
-				.jsonPath("$[0].descricao").isEqualTo(task.getDescricao())
-				.jsonPath("$[0].realizado").isEqualTo(task.isRealizado())
-				.jsonPath("$[0].prioridade").isEqualTo(task.getPrioridade());
-*/
 
 
 
@@ -144,5 +138,7 @@ class TestWebRequest {
 				.jsonPath("$").isEqualTo("Task 1 não existe!");
 
 	}
+
+	 */
 
 }

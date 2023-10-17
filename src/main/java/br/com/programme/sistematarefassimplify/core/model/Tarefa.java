@@ -15,7 +15,7 @@ public class Tarefa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idTable;
+    private long idTask;
 
     @Column(name = "name", nullable = false)
     @NotBlank

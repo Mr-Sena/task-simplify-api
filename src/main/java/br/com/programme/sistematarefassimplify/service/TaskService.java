@@ -33,7 +33,7 @@ public class TaskService {
     public Tarefa atualizar(Long id, Tarefa task) {
 
         repository.findById(id).ifPresentOrElse((existingTask) -> {
-            task.setIdTable(id);
+            task.setIdTask(id);
             repository.save(task);
         }, () -> {
             throw new BadRequestException("Task %d não existe!".formatted(id));
