@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-data
+spec:
+  selector:
+    matchLabels:
+      app: mysql-data
+  template:
+    metadata:
+      labels:
+        app: mysql-data
+    spec:
+      containers:
+        - name: mysql-data
+          image: mysql
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: mysql12344
+            - name: MYSQL_DATABASE
+              value: datafort
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: mysql-vol
+      volumes:
+        - name: mysql-vol
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-base
+spec:
+  selector:
+    app: mysql-data
+  ports:
+    - port: 3306
+  type: LoadBalancer
