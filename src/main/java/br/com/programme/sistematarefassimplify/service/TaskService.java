@@ -32,6 +32,7 @@ public class TaskService {
 
     public Tarefa atualizar(Long id, Tarefa task) {
 
+
         repository.findById(id).ifPresentOrElse((existingTask) -> {
             task.setIdTask(id);
             repository.save(task);
@@ -42,7 +43,7 @@ public class TaskService {
         return task;
     }
 
-    public Object remove(Long id) {
+    public Tarefa remove(Long id) {
 
         var task = repository.findById(id);
 
