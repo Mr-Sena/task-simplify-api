@@ -24,14 +24,23 @@ public class UsuarioService {
     public User findUser(String username) {
         Optional<User> usuario = repository.findByUsername(username);
 
-        if (usuario.isEmpty())
-            throw new BadRequestException("Usuário %s não existe.".formatted(username));
-
-        return usuario.get();
+        return usuario.orElse(null);
 
     }
 
     public List<User> findAll() {
         return repository.findAll();
+    }
+
+    public User remove(Long idUser) {
+
+        var user = repository.findById(idUser);
+
+        if(user.isPresent()) {
+            repository.deleteById(idUser);
+            return user.get();
+        }
+
+        throw new BadRequestException("User %d não existe!".formatted(idUser));
     }
 }

@@ -1,14 +1,15 @@
 package br.com.programme.sistematarefassimplify.core.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "usuario")
+@NoArgsConstructor
 @AllArgsConstructor
 public class User {
 

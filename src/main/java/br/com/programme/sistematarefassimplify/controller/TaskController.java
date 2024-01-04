@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//OpenApi --> http://localhost:8080/swagger-ui.html [link swagger]
+//OpenApi --> http://localhost:8080/swagger-ui.html [swagger link]
 
 
 @RestController
