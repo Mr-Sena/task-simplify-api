@@ -1,4 +1,4 @@
-package br.com.programme.sistematarefassimplify.infra.config.exception;
+package br.com.programme.sistematarefassimplify.config.exception;
 
 public class BadRequestException extends RuntimeException{
 

@@ -10,7 +10,7 @@ volumes:
 
 services:
   java-task-list:
-      image: joaoinvernal/task-list-api:v1
+      image: joaoinvernal/task-list-api:v2
       ports:
         - 8080:8080
       networks:

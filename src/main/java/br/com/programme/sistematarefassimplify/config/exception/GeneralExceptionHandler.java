@@ -1,4 +1,4 @@
-package br.com.programme.sistematarefassimplify.infra.config.exception;
+package br.com.programme.sistematarefassimplify.config.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -12,4 +12,8 @@ public class GeneralExceptionHandler {
         return ResponseEntity.badRequest().body(exception.getMessage());
     }
 
+    @ExceptionHandler(NotFoundException.class)
+    private ResponseEntity handlerNotFound(NotFoundException exception) {
+        return ResponseEntity.status(404).body(exception.getMessage());
+    }
 }

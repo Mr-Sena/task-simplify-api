@@ -1,7 +1,7 @@
 package br.com.programme.sistematarefassimplify.service;
 
 import br.com.programme.sistematarefassimplify.core.model.Tarefa;
-import br.com.programme.sistematarefassimplify.infra.config.exception.BadRequestException;
+import br.com.programme.sistematarefassimplify.config.exception.BadRequestException;
 import br.com.programme.sistematarefassimplify.infra.repo.TaskRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
