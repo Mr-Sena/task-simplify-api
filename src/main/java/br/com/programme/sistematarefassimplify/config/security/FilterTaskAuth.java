@@ -1,4 +1,4 @@
-package br.com.programme.sistematarefassimplify.infra.security;
+package br.com.programme.sistematarefassimplify.config.security;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import br.com.programme.sistematarefassimplify.service.UsuarioService;
