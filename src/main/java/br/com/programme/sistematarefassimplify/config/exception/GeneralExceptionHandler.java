@@ -11,9 +11,4 @@ public class GeneralExceptionHandler {
     private ResponseEntity handlerBadRequest(BadRequestException exception) {
         return ResponseEntity.badRequest().body(exception.getMessage());
     }
-
-    @ExceptionHandler(NotFoundException.class)
-    private ResponseEntity handlerNotFound(NotFoundException exception) {
-        return ResponseEntity.status(404).body(exception.getMessage());
-    }
 }
