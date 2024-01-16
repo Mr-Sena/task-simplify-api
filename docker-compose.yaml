@@ -19,7 +19,7 @@ services:
         - mysql-base
 
   mysql-base:
-    image: mysql
+    image: mysql:8.2.0
     ports:
       - 3306:3306
     networks:
@@ -33,5 +33,5 @@ services:
 
 
 ---
-##docker run --name mysql-base -e MYSQL_ROOT_PASSWORD=mysql12344 -e MYSQL_DATABAS=datafort -p 3306:3306 --network java-data-connect mysql
-##docker run --name java-task-app -p 8080:8080 --network java-data-connect task-list-api:v1
+##docker run --name mysql-base -e MYSQL_ROOT_PASSWORD=mysql12344 -e MYSQL_DATABAS=datafort -p 3306:3306 --network java-data-connect mysql:8.2.0
+##docker run --name java-task-app -p 8080:8080 --network java-data-connect task-list-api:v3
