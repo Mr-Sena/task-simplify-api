@@ -6,7 +6,7 @@
 </p>
 
 
-A API permite gerenciar atividade(s) para uma determinada tarefa; através de um sistema CRUD que é exposto para o BackEnd.
+A API permite gerenciar atividade(s) para uma determinada tarefa; através de um sistema CRUD que é exposto para o BackEnd. O objetivo é propor realizar a entrega para o [desafio](https://github.com/simplify-tec/desafio-junior-backend-simplify).
 
 ## Tecnologias:
 - Spring Boot;
